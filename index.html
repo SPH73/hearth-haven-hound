@@ -711,45 +711,93 @@
     }
 
     /* Responsive Design */
-    @media (max-width: 992px) {
-      .hero-content {
-        flex-direction: column;
-      }
-      
-      .strengths-content {
-        flex-direction: column;
-      }
-      
-      .booking-container {
-        flex-direction: column;
-      }
-      
-      .hero-text h1 {
-        font-size: 2.5rem;
-      }
-    }
 
-    @media (max-width: 768px) {
-      .desktop-nav {
-        display: none;
-      }
-      
-      .mobile-nav-toggle {
-        display: block;
-      }
-      
-      .hero-btns {
-        flex-direction: column;
-      }
-      
-      .section-header h2 {
-        font-size: 2rem;
-      }
-      
-      .booking-container {
-        padding: 30px;
-      }
-    }
+@media (max-width: 1024px) {
+  .hero-content,
+  .strengths-content,
+  .booking-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content,
+  .testimonial-carousel,
+  .strengths-content,
+  .booking-form {
+    gap: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .section-header h2,
+  .strengths-text h2,
+  .booking-text h2 {
+    font-size: 2rem;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .hero-text p,
+  .section-header p,
+  .booking-text p,
+  .strengths-text p {
+    font-size: 1rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    text-align: center;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .booking-container,
+  .strengths-content {
+    padding: 30px 20px;
+  }
+
+  .booking-text h2,
+  .strengths-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
   </style>
 </head>
 <body>
