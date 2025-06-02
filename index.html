@@ -806,7 +806,7 @@
               "Pixie transformed my overgrown garden into a beautiful, manageable space. Her attention to detail is incredible and she went above and beyond to make everything perfect!"
             </div>
             <div class="testimonial-author">
-              <div class="author-avatar">MJ</div>
+              <div class="author-avatar">BW</div>
               <div class="author-info">
                 <h4>Brian Wallis</h4>
                 <p>Midhurst</p>
@@ -819,7 +819,7 @@
               "As a property management company with communal grounds, I rely on Downs Hearth & Haven for our regular grounds maintenance. Pixie's reliability and thoroughness have saved me countless hours and headaches."
             </div>
             <div class="testimonial-author">
-              <div class="author-avatar">TR</div>
+              <div class="author-avatar">HW</div>
               <div class="author-info">
                 <h4>Hurstwood</h4>
                 <p>Midhurst</p>
@@ -832,7 +832,7 @@
               "I have mobility issues and Pixie's help with both my home and garden has been lovely. She anticipates needs I didn't even know I had!"
             </div>
             <div class="testimonial-author">
-              <div class="author-avatar">PW</div>
+              <div class="author-avatar">A</div>
               <div class="author-info">
                 <h4>Aija</h4>
                 <p>Wisborough Green</p>
@@ -876,6 +876,7 @@
             <li>Cleaning Services - standard clean</li>
             <li>Cleaning Services - deep clean</li>
             <li>Organizing & Decluttering</li>
+            <li>End-of-Tenancy Cleaning</li>
           </ul>
           <div class="service-price">From £20/hour</div>
           <a href="#booking" class="btn btn-primary">Book Home Care</a>
@@ -969,35 +970,40 @@
   </section>
 
   <!-- Booking Section -->
-  <section class="booking" id="booking">
-    <div class="container">
-      <div class="booking-container">
-        <div class="booking-text">
-          <h2>Ready to Transform Your Space?</h2>
-          <p>Book your personalised consultation call today and experience the Downs Hearth & Haven difference. Let's discuss how we can make your home and garden more beautiful, functional, and stress-free.</p>
-          <p><strong>Serving the South Downs region:</strong> Brighton, Lewes, Arundel, Chichester, and surrounding areas.</p>
-        </div>
-        
-        <div class="booking-form">
-          <h3 style="color: var(--dark-sage); margin-bottom: 20px;">Book Your Service</h3>
+<!-- Booking Section -->
+<section class="booking" id="booking">
+  <div class="container">
+    <div class="booking-container">
+      <div class="booking-text">
+        <h2>Ready to Transform Your Space?</h2>
+        <p>Book your personalised consultation call today and experience the Downs Hearth & Haven difference. Let's discuss how we can make your home and garden more beautiful, functional, and stress-free.</p>
+        <p><strong>Serving the Midhurst and surrounding neighbourhoods:</strong> Petersfield, Totton, Stedham, Easebourne, Lurgashall and surrounding areas that fall within a 10 mile radius.</p>
+      </div>
+      
+      <div class="booking-form">
+        <h3 style="color: var(--dark-sage); margin-bottom: 20px;">Book Your Service</h3>
+        <form name="contact" netlify method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success">
+          <!-- Honeypot Field -->
+          <input type="text" name="bot-field" style="display: none;">
+          
           <div class="form-group">
             <label for="name">Full Name</label>
-            <input type="text" id="name" placeholder="Your name">
+            <input type="text" id="name" name="name" placeholder="Your name" required>
           </div>
           
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="your@email.com">
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
           </div>
           
           <div class="form-group">
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" placeholder="01234 567890">
+            <input type="tel" id="phone" name="phone" placeholder="01234 567890">
           </div>
           
           <div class="form-group">
             <label for="service">Service Needed</label>
-            <select id="service">
+            <select id="service" name="service" required>
               <option value="">Select a service</option>
               <option value="home">Home Care</option>
               <option value="garden">Garden Care</option>
@@ -1007,15 +1013,16 @@
           </div>
           
           <div class="form-group">
-            <label for="message">Your Requirements</label>
-            <textarea id="message" placeholder="Tell us about your needs..."></textarea>
+            <label for="message">Your Requirements (including date)</label>
+            <textarea id="message" name="message" placeholder="Tell us about your needs..."></textarea>
           </div>
           
-          <button class="booking-btn">Request Consultation</button>
-        </div>
+          <button type="submit" class="booking-btn">Request Consultation</button>
+        </form>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer id="contact">
@@ -1047,18 +1054,18 @@
             <li><a href="#services">Home Care</a></li>
             <li><a href="#services">Garden Care</a></li>
             <li><a href="#services">Pet Care</a></li>
-            <li><a href="#services">Specialized Packages</a></li>
+            <li><a href="#services">Specialised Packages</a></li>
           </ul>
         </div>
         
         <div class="footer-column">
-          <h3>Contact Us</h3>
+          <h3>Let's Chat!'</h3>
           <div class="contact-info">
             <div class="contact-item">
               <div class="contact-icon">
                 <i class="fas fa-map-marker-alt"></i>
               </div>
-              <div>South Downs, East Sussex, UK</div>
+              <div>Midhurst, West Sussex</div>
             </div>
             
             <div class="contact-item">
