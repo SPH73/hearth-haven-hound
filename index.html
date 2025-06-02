@@ -970,7 +970,6 @@
   </section>
 
   <!-- Booking Section -->
-<!-- Booking Section -->
 <section class="booking" id="booking">
   <div class="container">
     <div class="booking-container">
@@ -999,6 +998,13 @@
           <div class="form-group">
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone" placeholder="01234 567890">
+          </div>
+
+          <div class="form-group">
+            <label for="postcode">Postcode</label>
+            <input type="text" id="postcode" name="postcode" placeholder="GU29 9AB" required
+                   pattern="[A-Za-z]{1,2}[0-9][A-Za-z0-9]? [0-9][A-Za-z]{2}"
+                   title="Please enter a valid UK postcode (e.g. GU29 9AB)">
           </div>
           
           <div class="form-group">
