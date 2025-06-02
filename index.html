@@ -794,7 +794,7 @@
         <p>South Downs specialist caring for your home, garden and pets with relentless dedication. We won't stop until it's done right!</p>
         
         <div class="hero-btns">
-          <a href="#booking" class="btn btn-primary">Book a Consultation Call</a>
+          <a href="#booking" class="btn btn-primary">Request a Consultation Call</a>
           <a href="#services" class="btn btn-secondary">Our Services</a>
         </div>
       </div>
@@ -1078,21 +1078,21 @@
               <div class="contact-icon">
                 <i class="fas fa-phone"></i>
               </div>
-              <div>01234 567890</div>
+              <div>07833089559</div>
             </div>
             
             <div class="contact-item">
               <div class="contact-icon">
                 <i class="fas fa-envelope"></i>
               </div>
-              <div>care@downshearthhaven.co.uk</div>
+              <div>bookme@downshearthhaven.co.uk</div>
             </div>
           </div>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p>&copy; 2023 Downs Hearth & Haven. All rights reserved. | Designed with care for the South Downs community</p>
+        <p>&copy; 2025 Downs Hearth & Haven. All rights reserved. | Designed with care for the South Downs community</p>
       </div>
     </div>
   </footer>
@@ -1157,21 +1157,35 @@
     });
     
     // Form submission handling
-    const bookingForm = document.querySelector('.booking-form');
-    const bookingBtn = document.querySelector('.booking-btn');
-    
-    bookingBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('name').value;
-      
-      if (name) {
-        // In a real app, this would submit to a backend
-        alert(`Thank you ${name}! Your consultation call request has been received. We'll contact you shortly.`);
-        bookingForm.reset();
-      } else {
-        alert('Please enter your name to book a consultation call.');
-      }
-    });
+const bookingForm = document.querySelector('form[name="booking"]');
+const bookingBtn = document.querySelector('.booking-btn');
+
+bookingBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  
+  // Convert postcode to uppercase
+  const postcodeInput = document.getElementById('postcode');
+  if (postcodeInput) {
+    postcodeInput.value = postcodeInput.value.toUpperCase().trim();
+  }
+
+  // Basic validation
+  const name = document.getElementById('name').value.trim();
+  const postcode = postcodeInput ? postcodeInput.value.trim() : '';
+  
+  if (!name) {
+    alert('Please enter your name to request a consultation call.');
+    return;
+  }
+
+  if (postcode && !/^[A-Z]{1,2}\d[A-Z\d]? \d[A-Z]{2}$/i.test(postcode)) {
+    alert('Please enter a valid UK postcode (e.g. GU29 9AB)');
+    return;
+  }
+  
+  // Netlify will handle the actual form submission
+  bookingForm.submit();
+});
   </script>
 </body>
 </html>
