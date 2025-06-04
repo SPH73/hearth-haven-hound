@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Downs Hearth & Haven | Home & Garden Care Specialists</title>
+    <title>Downs Hearth & Haven | Home, Garden & Pet Care Services</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -96,13 +96,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 15px 0;
+        padding: 16px 12px;
       }
 
       .logo {
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 20px;
         text-decoration: none;
       }
 
@@ -115,25 +115,6 @@
         align-items: center;
         justify-content: center;
         position: relative;
-      }
-
-      .logo-icon .house {
-        width: 24px;
-        height: 20px;
-        background: var(--cream);
-        position: relative;
-        z-index: 2;
-      }
-
-      .logo-icon .leaf {
-        width: 18px;
-        height: 18px;
-        background: var(--sage);
-        border-radius: 50% 0 50% 50%;
-        position: absolute;
-        top: 10px;
-        left: 25px;
-        z-index: 1;
       }
 
       .logo-text {
@@ -719,6 +700,25 @@
         background: var(--terracotta);
         transform: translateY(-3px);
       }
+      /* Bark Badges Styling */
+      .bark-badges-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin: 15px 0;
+        padding: 10px 0;
+      }
+
+      .bark-badge {
+        min-height: 60px; /* Adjust based on badge height */
+        display: flex;
+        align-items: center;
+      }
+
+      .bark-badge a:hover {
+        opacity: 0.9;
+      }
 
       .footer-bottom {
         text-align: center;
@@ -775,7 +775,14 @@
           padding: 10px 20px;
         }
       }
-
+      /* Responsive adjustments bark badges */
+      @media (max-width: 600px) {
+        .bark-badges-container {
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+        }
+      }
       .visually-hidden {
         position: absolute;
         width: 1px;
@@ -912,7 +919,7 @@
     <section class="services" id="services">
       <div class="container">
         <div class="section-header">
-          <h2>Our Specialized Services</h2>
+          <h2>Our Specialised Services</h2>
           <p>
             Comprehensive care solutions tailored to your unique needs in the
             South Downs area
@@ -1192,7 +1199,7 @@
           </div>
 
           <div class="footer-column">
-            <h3>Let's Chat!'</h3>
+            <h3>Let's Chat!</h3>
             <div class="contact-info">
               <div class="contact-item">
                 <div class="contact-icon">
@@ -1217,7 +1224,44 @@
             </div>
           </div>
         </div>
+        <div class="bark-badges-container">
+          <!-- Reviews Badge -->
+          <div class="bark-badge">
+            <a
+              href="https://www.bark.com/en/gb/company/downs-hearth-amp-haven/PwVGla/"
+              target="_blank"
+              class="bark-widget"
+              data-type="reviews"
+              data-id="PwVGla"
+              data-image="small-navy"
+              data-version="3.0"
+            >
+              Downs Hearth & Haven Reviews
+            </a>
+          </div>
 
+          <!-- Pro Badge -->
+          <div class="bark-badge">
+            <a
+              href="https://www.bark.com/en/gb/company/downs-hearth-amp-haven/PwVGla/"
+              target="_blank"
+              class="bark-widget"
+              data-type="pro"
+              data-id="PwVGla"
+              data-image="small-navy"
+              data-version="3.0"
+            >
+              Downs Hearth & Haven Pro
+            </a>
+          </div>
+
+          <!-- Bark Script (only need once) -->
+          <script
+            type="text/javascript"
+            src="https://www.bark.com/assets/js/frontend-v2/widgets-v2.24a197bed6.v2.js"
+            defer
+          ></script>
+        </div>
         <div class="footer-bottom">
           <p>
             &copy; 2025 Downs Hearth & Haven. All rights reserved. | Designed
